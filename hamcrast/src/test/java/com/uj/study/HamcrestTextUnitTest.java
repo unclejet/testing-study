@@ -2,6 +2,8 @@ package com.uj.study;
 
 import org.junit.Test;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 import static org.hamcrest.Matchers.emptyString;
 import static org.hamcrest.core.StringContains.containsString;
 import static org.hamcrest.core.StringContains.containsStringIgnoringCase;
@@ -93,5 +95,15 @@ public class HamcrestTextUnitTest {
         assertThat(first, endsWith("lo"));
         assertThat(first, endsWithIgnoringCase("LO"));
     }
-    
+
+    @Test
+    public void putIfAbsent() {
+        ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
+        String key = "mykey";
+        String previousValue = map.putIfAbsent(key, "value1");
+        System.out.println("mykey value1: " + map.get(key));
+        System.out.println("previousValue1: " + previousValue);
+        previousValue = map.putIfAbsent(key, "value2");
+        System.out.println("mykey value2: " + map.get(key));
+    }
 }
