@@ -12,6 +12,7 @@
         <module>../hamcrast</module>
         <module>../assertJ</module>
         <module>../junit5-guide</module>
+        <module>../junit5-migration</module>
     </modules>
 
     <dependencyManagement>
@@ -68,11 +69,7 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
     <properties>
