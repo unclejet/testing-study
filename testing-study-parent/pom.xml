@@ -15,7 +15,9 @@
         <module>../junit5-migration</module>
         <module>../junit-test-resource-read</module>
         <module>../junit5-filter-tags</module>
-        <module>../mockito-verify</module>
+        <module>../mockito</module>
+        <module>../PowerMockito</module>
+        <module>../mockito2</module>
     </modules>
 
     <dependencyManagement>
@@ -114,6 +116,34 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+            <!-- power mockito -->
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${powermock-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-core</artifactId>
+                <version>${powermock-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4-rule</artifactId>
+                <version>${powermock-version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -150,6 +180,7 @@
         <h2.version>1.4.197</h2.version>
         <mockito.version>2.21.0</mockito.version>
         <commons-lang3.version>3.5</commons-lang3.version>
+        <powermock-version>2.0.2</powermock-version>
     </properties>
 
 
