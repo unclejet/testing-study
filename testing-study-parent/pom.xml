@@ -18,6 +18,7 @@
         <module>../mockito</module>
         <module>../PowerMockito</module>
         <module>../mockito2</module>
+        <module>../mocks</module>
     </modules>
 
     <dependencyManagement>
@@ -84,6 +85,20 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-params</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
                 <version>${mockito.version}</version>
@@ -144,7 +159,32 @@
                 <version>${powermock-version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.easymock</groupId>
+                <artifactId>easymock</artifactId>
+                <version>${easymock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jmockit</groupId>
+                <artifactId>jmockit</artifactId>
+                <version>${jmockit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.javafaker</groupId>
+                <artifactId>javafaker</artifactId>
+                <version>${javafaker.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.jimfs</groupId>
+                <artifactId>jimfs</artifactId>
+                <version>${jimf.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 
     <dependencies>
@@ -181,7 +221,19 @@
         <mockito.version>2.21.0</mockito.version>
         <commons-lang3.version>3.5</commons-lang3.version>
         <powermock-version>2.0.2</powermock-version>
+        <easymock.version>3.5.1</easymock.version>
+        <jmockit.version>1.41</jmockit.version>
+        <javafaker.version>0.15</javafaker.version>
+        <jimf.version>1.1</jimf.version>
     </properties>
 
+<!--    <properties>-->
+<!--        <javafaker.version>0.15</javafaker.version>-->
+<!--        <jukito.version>1.5</jukito.version>-->
+<!--        <mockito.version>2.21.0</mockito.version>-->
+<!--        -->
+<!--        <jmockit.version>1.41</jmockit.version>-->
+<!--        <jimf.version>1.1</jimf.version>-->
+<!--    </properties>-->
 
 </project>
