@@ -20,6 +20,7 @@
         <module>../mockito2</module>
         <module>../mocks</module>
         <module>../mock-server</module>
+        <module>../rest-testing</module>
     </modules>
 
     <dependencyManagement>
@@ -206,6 +207,13 @@
                 <artifactId>httpcore</artifactId>
                 <version>${apche-http-version}</version>
             </dependency>
+
+            <!-- test scoped -->
+            <dependency>
+                <groupId>com.github.tomakehurst</groupId>
+                <artifactId>wiremock</artifactId>
+                <version>${wiremock.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
@@ -250,6 +258,7 @@
         <jimf.version>1.1</jimf.version>
         <mock-sever-netty-version>3.10.8</mock-sever-netty-version>
         <apche-http-version>4.4.1</apche-http-version>
+        <wiremock.version>2.21.0</wiremock.version>
     </properties>
 
 <!--    <properties>-->
