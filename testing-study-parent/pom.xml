@@ -214,6 +214,35 @@
                 <artifactId>wiremock</artifactId>
                 <version>${wiremock.version}</version>
             </dependency>
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-java</artifactId>
+                <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>info.cukes</groupId>
+                <artifactId>cucumber-junit</artifactId>
+                <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jbehave</groupId>
+                <artifactId>jbehave-core</artifactId>
+                <version>${jbehave.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.intuit.karate</groupId>
+                <artifactId>karate-apache</artifactId>
+                <version>${karate.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.intuit.karate</groupId>
+                <artifactId>karate-junit4</artifactId>
+                <version>${karate.version}</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
@@ -259,6 +288,9 @@
         <mock-sever-netty-version>3.10.8</mock-sever-netty-version>
         <apche-http-version>4.4.1</apche-http-version>
         <wiremock.version>2.21.0</wiremock.version>
+        <cucumber.version>1.2.5</cucumber.version>
+        <jbehave.version>4.1</jbehave.version>
+        <karate.version>0.6.1</karate.version>
     </properties>
 
 <!--    <properties>-->
