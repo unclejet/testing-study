@@ -21,6 +21,7 @@
         <module>../mocks</module>
         <module>../mock-server</module>
         <module>../rest-testing</module>
+        <module>../selenium</module>
     </modules>
 
     <dependencyManagement>
@@ -243,6 +244,47 @@
                 <version>${karate.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>${selenium-java.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-logging</artifactId>
+                        <groupId>commons-logging</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+            </dependency>
+
+            <!-- logging -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${org.slf4j.version}</version>
+            </dependency>
+
         </dependencies>
 
     </dependencyManagement>
@@ -291,6 +333,10 @@
         <cucumber.version>1.2.5</cucumber.version>
         <jbehave.version>4.1</jbehave.version>
         <karate.version>0.6.1</karate.version>
+        <selenium-java.version>3.4.0</selenium-java.version>
+        <testng.version>6.10</testng.version>
+        <org.slf4j.version>1.7.21</org.slf4j.version>
+        <logback.version>1.1.7</logback.version>
     </properties>
 
 <!--    <properties>-->
