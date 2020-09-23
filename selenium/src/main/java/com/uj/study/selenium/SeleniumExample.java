@@ -3,7 +3,7 @@ package com.uj.study.selenium;
 import com.uj.study.selenium.config.SeleniumConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
@@ -47,9 +47,9 @@ public class SeleniumExample {
     }
 
     private void clickAboutUsLink() {
-        Actions builder = new Actions(config.getDriver());
-        WebElement element = this.config.getDriver().findElement(By.partialLinkText("About Baeldung."));
-        builder.moveToElement(element).build().perform();
+//        Actions builder = new Actions(config.getDriver());
+//        WebElement element = this.config.getDriver().findElement(By.partialLinkText("About Baeldung."));
+//        builder.moveToElement(element).build().perform();
     }
 
     public boolean isAuthorInformationAvailable() {
