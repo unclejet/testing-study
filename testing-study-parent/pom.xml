@@ -24,6 +24,7 @@
         <module>../selenium</module>
         <module>../test-container</module>
         <module>../testing-libraries</module>
+        <module>../maven-integration-test</module>
     </modules>
 
     <dependencyManagement>

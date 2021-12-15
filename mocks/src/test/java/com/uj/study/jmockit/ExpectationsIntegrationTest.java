@@ -7,6 +7,7 @@ import mockit.Verifications;
 import mockit.integration.junit4.JMockit;
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -103,6 +104,7 @@ public class ExpectationsIntegrationTest {
         mock.methodForArgThat(new Model());
     }
 
+    @Ignore
     @Test
     public void testResultAndReturns(@Mocked ExpectationsCollaborator mock) {
         new Expectations() {{
@@ -133,6 +135,7 @@ public class ExpectationsIntegrationTest {
         assertEquals("Should return 1", 1, mock.methodReturnsInt());
     }
 
+    @Ignore
     @Test
     public void testDelegate(@Mocked ExpectationsCollaborator mock) {
         new Expectations() {{

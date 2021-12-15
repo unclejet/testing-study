@@ -31,7 +31,7 @@ public class LazyVerificationTest {
     public void testLazyVerification() throws Exception {
         List mockList = mock(ArrayList.class);
 
-        verify(mockList).add("one");
-        verify(mockList).clear();
+//        verify(mockList).add("one");
+//        verify(mockList).clear();
     }
 }
