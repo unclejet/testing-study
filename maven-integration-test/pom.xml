@@ -19,6 +19,7 @@
         <module>surefire-baeldung</module>
         <module>surefire-cargo-baeldung</module>
         <module>category</module>
+        <module>separate-directory-baeldung</module>
     </modules>
     <packaging>pom</packaging>
 
