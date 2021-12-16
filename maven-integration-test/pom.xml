@@ -17,6 +17,8 @@
         <module>failsafe-junit4</module>
         <module>failsafe-baeldung</module>
         <module>surefire-baeldung</module>
+        <module>surefire-cargo-baeldung</module>
+        <module>category</module>
     </modules>
     <packaging>pom</packaging>
 
