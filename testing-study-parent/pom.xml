@@ -419,7 +419,7 @@
         <javafaker.version>0.15</javafaker.version>
         <jimf.version>1.1</jimf.version>
         <mock-sever-netty-version>3.10.8</mock-sever-netty-version>
-        <apche-http-version>4.4.1</apche-http-version>
+        <apche-http-version>4.5.13</apche-http-version>
         <wiremock.version>2.21.0</wiremock.version>
         <cucumber.version>1.2.5</cucumber.version>
         <io.cucumber.version>6.6.1</io.cucumber.version>
