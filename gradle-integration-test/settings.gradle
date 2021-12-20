@@ -1,0 +1,3 @@
+rootProject.name = 'gradle-integration-test'
+include 'test-sets-example-1'
+

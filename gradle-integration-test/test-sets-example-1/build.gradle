@@ -1,0 +1,48 @@
+plugins {
+    id 'application'
+    id 'org.unbroken-dome.test-sets' version '4.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.2'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+}
+
+group 'com.uj.study'
+version '1.0-SNAPSHOT'
+
+
+tasks.named('jar') {
+    manifest {
+        attributes('Main-Class': 'com.uj.study.themepark.RideStatusService')
+    }
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.uj.study.themepark.RideStatusService'
+}
+
+tasks.register('runJar', JavaExec) {
+    classpath tasks.named('jar').map { it.outputs }
+    classpath configurations.runtimeClasspath
+    mainClass = 'com.uj.study.themepark.RideStatusService'
+    args ' teacups'
+}
+
+testSets {
+    integrationTest
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('integrationTest')
+}
